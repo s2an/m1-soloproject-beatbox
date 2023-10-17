@@ -18,7 +18,7 @@ RSpec.describe Node do
     expect(node.data).to eq("plop")
   end
 
-  it 'has data' do
+  it 'has nil next_node' do
     node = Node.new("plop")
 
     expect(node.next_node).to eq(nil)
