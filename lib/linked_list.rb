@@ -13,7 +13,12 @@ class LinkedList
     #list.append = Node.new(data)
     #@data = Node.new(data)
     #list = Node.new(data)
-    @head = Node.new(data)
+    new_node = Node.new(data)
+    if @head == nil
+      then @head = new_node
+    else @next_node = new_node
+      
+    end
   end
 
   def count
@@ -34,6 +39,16 @@ class LinkedList
     #result = @data
     #for @head
     head.data.to_s 
+  end
+
+  def prepend(data)
+    #list.append(string) = data
+    #string = data
+    #data = Node.new(data)
+    #list.append = Node.new(data)
+    #@data = Node.new(data)
+    #list = Node.new(data)
+    @head = Node.new(data)
   end
 
 end
