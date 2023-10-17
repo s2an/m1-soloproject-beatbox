@@ -2,6 +2,7 @@ require 'pry'
 require './lib/linked_list'
 require './lib/node'
 
+### Iteration1 ###
 RSpec.describe LinkedList do
   it 'exists' do
     list = LinkedList.new
@@ -48,9 +49,11 @@ RSpec.describe LinkedList do
   it 'counts the nodes method' do
     list = LinkedList.new
     list.append("doop")
+    #list.append("foo")
     list.count
 
     expect(list.count).to eq(1)
+    #expect(list.count).to eq(2)
   end
 
   it 'converts data to a string' do
@@ -61,4 +64,41 @@ RSpec.describe LinkedList do
     expect(list.to_string).to eq("doop")
   end
 
+### Iteration2 ###
+
+it 'appends plop and returns a string' do
+  list = LinkedList.new
+  list.append("plop")
+  list.to_string
+
+  expect(list.to_string).to eq("plop")
+end
+
+it 'appends plop and suu and returns a string' do
+  list = LinkedList.new
+  list.append("plop")
+  list.append("suu")
+  list.to_string
+
+  expect(list.to_string).to eq("plop suu")
+end
+
+# it 'prepends dop and returns a string' do
+#   list = LinkedList.new
+#   list.prepend("dop")
+#   list.append("plop")
+#   list.append("suu")
+#   list.to_string
+
+#   expect(list.to_string).to eq("dop plop suu")
+# end
+
+# it 'counts the nodes in the list'
+#   list = LinkedList.new
+#   list.prepend("dop")
+#   list.append("plop")
+#   list.append("suu")
+#   list.count
+
+#   expect(list.count).to eq(3)
 end
